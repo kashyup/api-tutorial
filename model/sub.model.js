@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const { stringify } = require("querystring");
 
-const SubSchema = mongoose.Schema({
+const subSchema = mongoose.Schema({
     subCode:{
         type: String,
         required:true,
@@ -32,7 +32,7 @@ const SubSchema = mongoose.Schema({
     }]
 });
 
-const TeacherSchema = mongoose.Schema({
+const teacherSchema = mongoose.Schema({
     name:{
         type:String,
         required:true
@@ -49,9 +49,9 @@ const TeacherSchema = mongoose.Schema({
         required:true
     },
     subject:{
-        type:[subSchema]
+        type: [subSchema]
     }
 });
 
-const Teacher = mongoose.model("Teacher",teacherSchema);
+const Teacher = mongoose.model("Teacher", teacherSchema);
 module.exports = {Teacher};

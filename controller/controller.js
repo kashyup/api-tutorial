@@ -1,4 +1,4 @@
-const {Teacher}=require("./model/sub.model");
+const {Teacher}=require("../model/sub.model");
 
 async function register(request,response){
     const { mail } = request.query;
@@ -16,7 +16,7 @@ async function register(request,response){
         }
     }
     catch(error){
-        console.log({messge:error.message});
+        console.log({message:error.message});
 
     }
 }
