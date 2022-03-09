@@ -15,7 +15,7 @@ app.use(express.json({extended:true}));
 
 app.use(express.urlencoded({extended:true}));
 
-app.use(cors({ origin: true }));
+
 
 app.use(morgan("dev"));
 
@@ -25,8 +25,8 @@ const PORT = common.config()["PORT"];
 
 const URL = common.config()["MONGODB_URL"];
 
-console.log(url);
-console.log(port);
+console.log(URL);
+console.log(PORT);
 
 
 
