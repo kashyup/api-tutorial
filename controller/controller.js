@@ -71,7 +71,7 @@ async function attend( request , response){
       let presentCount = 0;
       let absentCount = 0;
       teacher.subject.find((it)=>it.subCode==subCode)
-      ?.student.find((it)=>it.rollNumber==stuRoll)
+      ?.student.find((it)=>it.rollNumber==StuRoll)
       ?.attendance?.filter((it)=>it.date >=from && it.date <= till)
       ?.map((it)=>{
           if(it.isPresent){
